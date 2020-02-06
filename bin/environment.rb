@@ -13,6 +13,14 @@ DB = ActiveRecord::Base.establish_connection(
 
 DB = ActiveRecord::Base.connection
 
+# sql = <<-SQL
+# CREATE TABLE IF NOT EXISTS dogs (
+#     id INTEGER PRIMARY KEY,
+#     name TEXT,
+#     breed TEXT
+# )
+# SQL
+
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
